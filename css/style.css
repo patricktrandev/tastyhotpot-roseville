@@ -1,0 +1,794 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 1.1rem;
+  color: #fff;
+  background-color: #333333;
+}
+.line::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #df4636;
+  display: block;
+  box-shadow: 0 0 20px 0 #df4636;
+  transition: all 0.5s;
+}
+.line:hover::after {
+  width: 100%;
+}
+.line.active::after {
+  width: 100%;
+}
+
+.section-spacing {
+  margin: 3.5rem auto;
+}
+.subtitle span {
+  text-transform: uppercase;
+  font-size: 1.475rem;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-weight: 700;
+  padding-left: 25px;
+}
+.subtitle::before {
+  content: "";
+  height: 4px;
+  border-radius: 2px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #df4636;
+}
+.line-bottom-section {
+  padding: 1.5rem 0 5rem;
+  border-bottom: 2px dashed #df4636;
+}
+.common-button {
+  font-weight: 500;
+  font-size: 1.4rem;
+  border: 1px solid #df4636;
+  padding: 15px 33px;
+  display: inline-block;
+  background-color: #df4636;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+.common-button:hover {
+  background: none;
+  color: #df4636;
+}
+.common-button a {
+  text-decoration: none;
+  color: #fff;
+}
+/* HEADER */
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  height: 100px;
+}
+#headerHome .navbar-collapse {
+  z-index: 18;
+}
+#headerCommon {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333333;
+  width: 100%;
+  border-bottom: 15px solid #df4636;
+  z-index: 5;
+}
+#headerFixed {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 15px solid #df4636;
+  transform: translate(-50%, -400%);
+  z-index: 16;
+}
+.tastyhotPotNav .logo-img {
+  max-height: 91px;
+  width: 100%;
+}
+#tastyHotPotNavBar .navbar-nav {
+  border-bottom: 1px solid rgba(255, 255, 255);
+}
+#tastyHotPotNavBar .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 0.8em;
+  padding: 0.5rem 1rem;
+}
+
+/* CAROUSEL */
+#carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption {
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+#carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption h1 {
+  font-size: 3.25rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+#carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption p {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+#carouselTastyHotpot .carousel-indicators {
+  justify-content: flex-start;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#carouselTastyHotpot .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: transparent;
+  opacity: 1;
+  box-sizing: border-box;
+}
+#carouselTastyHotpot .carousel-indicators li.active {
+  background: #fff;
+}
+#carouselTastyHotpot .tastyHotPotCarousel__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(49, 47, 47), transparent);
+}
+
+#carouselTastyHotpot {
+  height: 600px;
+}
+#carouselTastyHotpot .carousel-inner {
+  height: 100%;
+}
+#carouselTastyHotpot .carousel-item {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+#carouselTastyHotpot .carousel-item:first-child {
+  background-image: url("../img/tasty_hotpot_home_1.jpg");
+}
+#carouselTastyHotpot .carousel-item:nth-child(2) {
+  background-image: url("../img/tasty_hotpot_home_2.png");
+}
+#carouselTastyHotpot .carousel-item:nth-child(3) {
+  background-image: url("../img/tasty_hotpot_home_3.jpg");
+}
+/* INTRO */
+
+.tastyHotpotIntro__item {
+  padding: 7px 17px;
+}
+.tastyHotpotIntro .tastyHotpotIntro__item .tastyHotpotIntro__title {
+  margin-bottom: 1.3rem;
+}
+
+.tastyHotpotIntro p {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  padding: 0 5px;
+}
+/* PROMOTION */
+.tasty__promotion {
+  text-align: center;
+}
+.tasty__promotion .tasty__promotion__item {
+  padding: 6% 60px;
+  width: 70%;
+  height: auto;
+}
+.tasty__promotion .tasty__promotion__item .tasty__promotion__title {
+  color: #c3cad1;
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin: 3rem 12px 1rem;
+}
+.tasty__promotion .tasty__promotion__item .tasty__promotion__content {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+.tasty__promotion .tasty__promotion__item .tasty__promotion__content span {
+  color: #df4636;
+}
+.tasty__promotion .tasty__promotion__img {
+  padding: 0;
+}
+.tasty__promotion img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.tasty__top__footer {
+  background-color: #df4636;
+  padding: 3px 0;
+}
+.tasty__top__footer .tasty__top__footer__logo img {
+  width: 80px;
+}
+.tasty__top__footer__address p {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+.tasty__top__footer__social {
+  text-align: right;
+  padding: 15px 10px;
+}
+.tasty__top__footer__social a {
+  font-size: 1.8rem;
+  margin: 20px 7px;
+  color: #fff;
+}
+
+/* MENU */
+
+.tastyMenu__hotpot {
+  margin: 0 auto;
+  margin: 10.5rem auto;
+}
+.tastyMenu__hotpot__caption {
+  color: #7a7a7a;
+  font-size: 1.5rem;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__img {
+  overflow: hidden;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__img img {
+  max-width: 280px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__item:hover img {
+  scale: 1.1;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__item {
+  margin: 17px 10px 17px 0;
+  background-color: #121a1d;
+  border: 2px outset #333333;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content {
+  padding: 25px 10px;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h3 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h4 {
+  color: #7a7a7a;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content a {
+  color: #df4636;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content i {
+  color: #df4636;
+}
+/* ADD ONS */
+
+.tasty__addons {
+  background-image: url("../img/body_bg.png");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 2.8rem 0;
+  color: #000;
+}
+.tasty__addons .tasty__addons__title span {
+  color: #121a1d;
+}
+.tasty__addons .tasty__addons__list,
+.tasty__drinks .tasty__drinks_list {
+  margin: 2.3rem 0 0;
+}
+.tasty__addons .tasty__addons__list ul,
+.tasty__addons__directions-list ul,
+.tasty__drinks .tasty__drinks_list ul {
+  list-style-type: none;
+}
+.tasty__addons .tasty__addons__list li {
+  border-bottom: 1px dotted #ccc;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.tasty__drinks .tasty__drinks_list li {
+  padding: 5px 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.3rem;
+}
+.tasty__addons__directions-list,
+.tasty__drinks__directions-list {
+  margin: 0 auto;
+}
+.tasty__drinks__directions-list .fa-star {
+  color: #ccc;
+}
+.tasty__addons .fa-thumbs-up,
+.tasty__drinks .fa-star {
+  color: #df4636;
+  font-size: 1.3rem;
+}
+.tasty__addons .fa-question-circle {
+  color: #111010;
+  font-size: 1.3rem;
+}
+/* DRINKS */
+.tasty__drinks {
+  padding: 40px 30px;
+  color: #fff;
+  position: relative;
+}
+
+.tasty__drinks__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #535050, transparent);
+}
+
+.tasty__drinks h4 {
+  font-size: 1.3rem;
+  color: #df4636;
+  font-weight: 700;
+  text-align: center;
+  padding: 4px 0;
+  justify-content: center;
+  border-bottom: 5px double #fff;
+  border-top: 5px double #fff;
+}
+/* HOTPOT ITEM */
+/* HOTPOT ITEM */
+.hotpot__item {
+  margin: 10.5rem auto;
+}
+.hotpot__item__content {
+  background-color: #2e2d2d;
+  background-image: url("../img/body_bg.png");
+  color: #000;
+  padding: 1.8rem;
+  border-radius: 9px;
+}
+
+.hotpot__item .hotpot__item__img {
+  overflow: hidden;
+  border: 4px solid #ccc;
+  border-radius: 7px;
+  object-fit: cover;
+}
+.hotpot__item .hotpot__item__img img {
+  max-width: 650px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.hotpot__item .hotpot__item__img:hover img {
+  scale: 1.1;
+}
+.hotpot__item .hotpot__menu__item__content h3 {
+  font-weight: 700;
+  color: #df4636;
+  font-size: 2.3rem;
+}
+.hotpot__item .hotpot__menu__item__content h4 {
+  font-size: 1.7rem;
+  margin: 12px 0;
+}
+.hotpot__item .hotpot__menu__item__text {
+  color: #333333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+/* ABOUT TASTY */
+.about__tasty,
+.promotion__tasty {
+  margin: 10rem auto;
+}
+.about__tasty__content,
+.promotion__tasty__content {
+  border: 5px double #ccc;
+  border-radius: 12px;
+  padding: 22px 35px;
+  line-height: 1.6rem;
+}
+.promotion__tasty h4 {
+  text-align: center;
+  margin: 12px 0;
+  color: #7a7a7a;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 7px 0;
+}
+.about__tasty__content h4 {
+  margin: 22px 0;
+  color: #7a7a7a;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 7px 0;
+  border-bottom: 2px dotted #535050;
+}
+.promotion__tasty p:first-child {
+  text-align: center;
+}
+.about__tasty__content p,
+.promotion__tasty p {
+  font-size: 1.4rem;
+  letter-spacing: 0.8px;
+}
+.about__tasty__content p > span,
+.promotion__tasty p > span {
+  font-size: 1.3rem;
+  color: #df4636;
+  font-style: italic;
+}
+.about__tasty__content p > a {
+  color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 991.98px) {
+  header .navbar-brand {
+    max-width: 180px;
+  }
+  header .navbar-brand img {
+    max-width: 100%;
+  }
+  #headerHome .navbar-nav .nav-link,
+  #headerFixed .navbar-nav .nav-link,
+  #headerCommon .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 20px 12px;
+    letter-spacing: 2px;
+  }
+  /* carousel */
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption {
+    left: 55%;
+  }
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 2.9rem;
+    letter-spacing: 2.3px;
+    margin-bottom: 10px;
+  }
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 1.45rem;
+    line-height: 1.1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  .common-button {
+    font-size: 1.4rem;
+    border: 1px solid #df4636;
+    padding: 13px 29px;
+    margin-top: 13px;
+  }
+  #carouselTastyHotpot .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+  }
+  /* INTRO */
+  .tastyHotpotIntro .tastyHotpotIntro__item {
+    padding: 12px 22px;
+    margin-bottom: 22px;
+  }
+  /* PROMOTION */
+  .tasty__promotion__row {
+    margin-bottom: 2rem;
+  }
+  .tasty__promotion img {
+    width: 80%;
+  }
+
+  /* MENU */
+
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h3 {
+    font-size: 1.2rem;
+  }
+
+  .tastyMenu__hotpot .subtitle,
+  .tastyMenu__hotpot__caption {
+    margin: 0 30px;
+  }
+  /* ITEM MENU */
+
+  .hotpot__item .hotpot__item__img img {
+    max-width: 650px;
+  }
+  .hotpot__item .hotpot__menu__item__content h3 {
+    font-size: 1.9rem;
+    margin: 12px 0;
+  }
+  .hotpot__item .hotpot__menu__item__content h4 {
+    font-size: 1.5rem;
+  }
+  .hotpot__item .hotpot__menu__item__text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .line.active::after {
+    width: 0;
+  }
+  /* HEADER */
+  header .navbar-toggler,
+  #headerCommon .navbar-toggler {
+    color: #df4636;
+  }
+  header .navbar-toggler:focus {
+    outline: none;
+  }
+  #headerHome .navbar-nav,
+  #headerFixed .navbar-nav,
+  #headerCommon .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+  #headerHome .navbar-nav .active .nav-link,
+  #headerFixed .navbar-nav .active .nav-link,
+  #headerCommon .navbar-nav .active .nav-link {
+    color: #df4636;
+  }
+  /* carousel */
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+  }
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 1.1rem;
+    line-height: 0.9rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  .common-button {
+    font-size: 1.1rem;
+    border: 1px solid #df4636;
+    padding: 12px 27px;
+    margin-top: 10px;
+  }
+  #carouselTastyHotpot .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+  }
+  /* INTRO */
+  .tastyHotpotIntro .tastyHotpotIntro__item {
+    padding: 12px 22px;
+    margin: 15px 22px;
+  }
+  /* PROMOTION */
+  .tasty__promotion .tasty__promotion__item .tasty__promotion__title {
+    color: #c3cad1;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    margin: 2.2rem 12px 1rem;
+  }
+  .tasty__promotion .tasty__promotion__item .tasty__promotion__content {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  /* FOOTER */
+  .tasty__top__footer .tasty__top__footer__logo img {
+    width: 60px;
+  }
+  .tasty__top__footer__address p {
+    font-size: 1.1rem;
+  }
+  .tasty__top__footer__social {
+    text-align: center;
+  }
+  /* MENU */
+  .tastyMenu__hotpot .subtitle,
+  .tastyMenu__hotpot__caption {
+    margin: 0 50px;
+  }
+
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content {
+    padding: 20px 7px;
+    text-align: center;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__img img {
+    max-width: 480px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h3 {
+    font-size: 1.4rem;
+    margin: 7px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h4 {
+    font-size: 1.3rem;
+    margin: 5px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content p {
+    font-size: 1.1rem;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content a {
+    font-size: 1.1rem;
+  }
+  /* ITEM MENU */
+  .hotpot__item .hotpot__item__img img {
+    max-width: 500px;
+  }
+  .hotpot__item .hotpot__menu__item__content h3 {
+    font-size: 1.3rem;
+  }
+  .hotpot__item .hotpot__menu__item__content h4 {
+    font-size: 1.2rem;
+  }
+  .hotpot__item .hotpot__menu__item__text {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header .navbar-brand,
+  #headerCommon .navbar-brand {
+    max-width: 110px;
+  }
+  header .navbar-brand img,
+  #headerCommon .navbar-brand img {
+    max-width: 100%;
+  }
+  #headerHome .navbar-nav .nav-link,
+  #headerFixed .navbar-nav .nav-link,
+  #headerCommon .navbar-nav .nav-link {
+    font-size: 11px;
+    padding: 16px 8px;
+    letter-spacing: 1.5px;
+  }
+  /* carousel */
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption {
+    left: 60%;
+  }
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 1.55rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  #carouselTastyHotpot .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  .common-button {
+    font-size: 1rem;
+    border: 1px solid #df4636;
+    padding: 9px 22px;
+    margin-top: 7px;
+  }
+  #carouselTastyHotpot .carousel-indicators {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #carouselTastyHotpot .carousel-indicators li {
+    width: 7px;
+    height: 7px;
+  }
+  /* INTRO */
+  .tastyHotpotIntro .tastyHotpotIntro__item {
+    padding: 5px 17px;
+    margin: 12px 30px;
+  }
+  .tastyHotpotIntro p {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    padding: 0 5px;
+  }
+  .subtitle span {
+    font-size: 1.2rem;
+  }
+  /* PROMOTION */
+  .tasty__promotion .tasty__promotion__item .tasty__promotion__title {
+    color: #c3cad1;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    margin: 2rem 12px 1rem;
+  }
+  .tasty__promotion .tasty__promotion__item .tasty__promotion__content {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  /* FOOTER */
+  .tasty__top__footer__social {
+    padding: 12px 7px;
+  }
+  .tasty__top__footer__social a {
+    font-size: 1.6rem;
+  }
+
+  /* MENU */
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content {
+    padding: 20px 7px;
+    text-align: center;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__list .tastyMenu__hotpot__img img {
+    max-width: 480px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h3 {
+    font-size: 1.3rem;
+    margin: 5px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content h4 {
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content p {
+    font-size: 1rem;
+  }
+  .tastyMenu__hotpot .tastyMenu__hotpot__item .tastyMenu__hotpot__content a {
+    font-size: 1rem;
+  }
+  .tastyMenu__hotpot__caption {
+    font-size: 1.2rem;
+  }
+  .tastyMenu__hotpot .subtitle,
+  .tastyMenu__hotpot__caption {
+    margin: 0 30px;
+  }
+  /* ITEM MENU */
+  .hotpot__item .subtitle {
+    margin: 0 30px;
+  }
+  .hotpot__item .hotpot__item__img img {
+    max-width: 320px;
+  }
+  .hotpot__item .hotpot__menu__item__content h3 {
+    font-size: 1.3rem;
+    margin: 9px 0;
+  }
+  .hotpot__item .hotpot__menu__item__content h4 {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  .hotpot__item .hotpot__menu__item__text {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+  .hotpot__item .hotpot__menu__item__content p:last-child {
+    font-size: 1rem;
+  }
+
+  .about__tasty,
+  .promotion__tasty {
+    padding: 0 1.8rem;
+  }
+}
